@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #selected{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li id="selected">javascript</li>
+    </ul>
+
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, tempora. Quo sit eum deserunt, itaque ullam minus tempore ut? Laborum esse consectetur assumenda perferendis cumque suscipit dolore quisquam quo voluptatem vitae, quos fuga id maiores voluptatibus sapiente sequi optio officiis architecto eius cupiditate aliquam tenetur magni? Quidem alias dignissimos voluptas?
+    </p>
+
+    <script>
+        function bcgcolor(color){
+            document.querySelector('body').style.backgroundColor = color;
+        }
+        function color(color){
+            document.querySelector('body').style.color = color;
+        }
+    </script>
+    
+  
+    <input type="button" value="change bg-color" onclick="
+    if(document.querySelector('body').style.backgroundColor === 'white'){
+    bcgcolor('black');
+    color('white');
+    } else {
+    bcgcolor('white');
+    color('black');
+    }
+    ">
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .dark{
+            background-color: black;
+            color: white;
+        }
+        .dark #selected{
+            color: yellow;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li id="selected">javascript</li>
+    </ul>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non ut, id atque asperiores iure obcaecati sapiente doloribus officiis delectus nulla quam quod, soluta aperiam ullam tenetur optio animi blanditiis.
+    </p>
+
+    <input type="button" value='dark' onclick="
+    document.body.className='dark';
+    alert('hello world')">
+</body>
+</html>

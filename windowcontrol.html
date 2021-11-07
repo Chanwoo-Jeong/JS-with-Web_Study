@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style></style>
+</head>
+<body>
+    <input type="button" value="open" onclick="winopen()">
+    <input type="text" onkeypress="winmessage(this.value)">
+    <input type="button" value="close" onclick="">
+    <script>
+        function winopen(){
+            win = window.open('prompt.html', 'ot');
+        }
+        function winmessage(msg){
+            win.document.getElementByID('box').innerText=msg;
+        }
+    </script>
+</body>
+</html>
