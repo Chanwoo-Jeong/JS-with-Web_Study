@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style></style>
+</head>
+<body>
+    <ul id="target">
+        <li>Html</li>
+        <li>CSS</li>
+    </ul>
+    <input type="button" onclick="callAppendChild()" value="appendChild()" />
+    <input type="button" onclick="callInsertBefore()" value="callInsertBefore()"/>
+
+    <script>
+        function callAppendChild(){
+            var target = document.getElementById('target');
+            var li = document.createElement('li');
+            var text = document.createTextNode('Javascript');
+            li.appendChild(text);
+            target.appendChild(li);
+        }
+
+        function callInsertBefore(){
+            var target = document.getElementById('target');
+            var li = document.createElement('li');
+            var text = document.createTextNode('jQuery');
+            li.appendChild(text);
+            target.insertBefore(li,target.firstChild);
+            
+        }
+    </script>
+
+    <ul>
+        <li>Html</li>
+        <li>CSS</li>
+        <li id="happy">JavaScript</li>
+    </ul>
+    <input type="button" onclick="removechild()" value="removechild()"/>
+
+    <script>
+        function removechild(){
+            var target = document.getElementById('happy');
+            target.parentNode.removeChild(target);
+        }
+
+    </script>
+
+    <ul>
+        <li>Html</li>
+        <li>css</li>
+        <li id="replace">JavaScript</li>
+    </ul>
+    <input type="button" onclick="callReplaceChild()" value="replacechild()"/>
+
+    <script>
+        function callReplaceChild(){
+            var a = document.createElement('a');
+            a.setAttribute('href','http://www.naver.com');
+            a.appendChild(document.createTextNode('link Javascript'));
+            
+            var target = document.getElementById('replace');
+            target.replaceChild(a,replace.firstChild);
+        }
+
+
+    </script>
+</body>
+</html>
